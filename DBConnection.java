@@ -37,6 +37,9 @@ public class DBConnection {
 		}
 		return con;
 	}
+	public void closeConnection(){
+		con.close();
+	}
 	public boolean registerpatient(PatientBean sbo) {
 		String sql = "insert into PTABLEE values(?,?,?,?,?,?,?,?,?)";
 		try {
